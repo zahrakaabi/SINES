@@ -65,9 +65,9 @@ function AffectDossierToLotForm({ setTableData, selectedDossiersIds, open, onClo
     }
   };
 
-  const updateAllSelectedDossiersNUMLOT = async () => {
+  const updateAllSelectedDossiersNUMLOT = () => {
     for ( const dossierId of selectedDossiersIds) {
-        await updateNumLot(dossierId);
+        updateNumLot(dossierId);
     }
     fetchUpdatedDossiers();
     onClose();

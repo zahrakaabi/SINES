@@ -35,7 +35,7 @@ function Container({ children }: Props) {
   const router = useRouter();
   const searchParams = useSearchParams();
  
-  const returnTo = searchParams.get('returnTo') || paths.dashboard.root;//ici
+  const returnTo = searchParams.get('returnTo') || paths.dashboard.root; // ici
   const { authenticated } = useAuthContext();
 
   const check = useCallback(() => {

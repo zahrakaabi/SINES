@@ -6,8 +6,7 @@ import { Box, Grid, Stack, Typography } from "@mui/material";
 
 // Local Components
 import { RHFTextField } from "../../hook-form";
-import { ANME_MODE_ACTUEL_OPTIONS } from "src/_mock/_ANME";
-import { RHFCheckbox, RHFMultiCheckbox } from "../../hook-form/rhf-checkbox";
+import { RHFCheckbox } from "../../hook-form/rhf-checkbox";
 
 /* -------------------------------------------------------------------------- */
 /*                            MODE ACTUEL COMPONENT                           */

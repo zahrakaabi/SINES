@@ -41,15 +41,6 @@ function DossierTableFiltersResult({
     onFilters('name', '');
   }, [onFilters]);
 
-  /*const handleRemoveService = useCallback(
-    (inputValue: string) => {
-      const newValue = filters.service.filter((item) => item !== inputValue);
-
-      onFilters('service', newValue);
-    },
-    [filters.service, onFilters]
-  );*/
-
   const handleRemoveStatus = useCallback(() => {
     onFilters('status', 'all');
   }, [onFilters]);
