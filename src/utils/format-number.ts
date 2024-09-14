@@ -40,27 +40,6 @@ export function fNumber(inputValue: InputValue) {
 };
 
 /* -------------------------------------------------------------------------- */
-/*                                 F CURRENCY                                 */
-/* -------------------------------------------------------------------------- */
-export function fCurrency(inputValue: InputValue) {
-  //const { code, currency } = getLocaleCode();
-  const currency = 'EUR';
-  
-  if (!inputValue) return '';
-
-  const number = Number(inputValue);
-
-  const fm = new Intl.NumberFormat('fr-EU', {
-    style: 'currency',
-    currency,
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 2,
-  }).format(number);
-
-  return fm;
-};
-
-/* -------------------------------------------------------------------------- */
 /*                                  F PERCENT                                 */
 /* -------------------------------------------------------------------------- */
 export function fPercent(inputValue: InputValue) {
