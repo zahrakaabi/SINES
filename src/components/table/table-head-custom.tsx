@@ -27,7 +27,7 @@ const visuallyHidden = {
 
 type Props = {
   order?: 'asc' | 'desc';
-  orderBy?: string;
+  orderBy?: number;
   headLabel: any[];
   rowCount?: number;
   numSelected?: number;

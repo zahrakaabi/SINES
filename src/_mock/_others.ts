@@ -68,6 +68,8 @@ export const _notifications = [...Array(9)].map((_, index) => ({
     'Communication',
     'Communication',
   ][index],
+  isUnRead: _mock.boolean(index),
+  createdAt: _mock.time(index),
   title:
     (index === 0 && `<p><strong>Deja Brady</strong> sent you a friend request</p>`) ||
     (index === 1 &&

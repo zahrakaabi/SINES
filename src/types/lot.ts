@@ -2,10 +2,10 @@
 /*                             I LOT TABLE FILTERS                            */
 /* -------------------------------------------------------------------------- */
 export type ILotTableFilters = {
-    createur: string;
+    créateur: string;
     status: string;
-    DATECREATION: Date | null;
-    DATEDEPOSITION: Date | null;
+    creationDate: Date | null;
+    depositionDate: Date | null;
 };
 
 /* -------------------------------------------------------------------------- */

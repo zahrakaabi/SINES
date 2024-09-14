@@ -10,7 +10,7 @@ export type IUserTableFilters = {
 /* -------------------------------------------------------------------------- */
 /*                           USER TABLE FILTERS VALUE                         */
 /* -------------------------------------------------------------------------- */
-export type IUserTableFilterValue = string;
+export type IUserTableFilterValue = string | string[];
 
 /* -------------------------------------------------------------------------- */
 /*                                  USER ITEM                                 */

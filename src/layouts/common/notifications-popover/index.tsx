@@ -61,7 +61,7 @@ export default function NotificationsPopover() {
 
   const [notifications, setNotifications] = useState(_notifications);
 
-  const totalUnRead = notifications.filter((item) => item.isUnRead === true).length;
+  const totalUnRead = notifications.filter((item) => item?.isUnRead === true).length;
 
   const handleMarkAllAsRead = () => {
     setNotifications(

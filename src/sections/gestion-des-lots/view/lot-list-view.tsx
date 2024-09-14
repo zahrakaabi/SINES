@@ -35,10 +35,10 @@ import { isAfter, isBetween } from 'src/utils/format-time';
 /*                          GESTION DES LOTS SECTION                          */
 /* -------------------------------------------------------------------------- */
 const defaultFilters: ILotTableFilters = {
-  createur: '',
+  créateur: '',
   status: 'all',
-  DATECREATION: null,
-  DATEDEPOSITION: null,
+  creationDate: null,
+  depositionDate: null,
 };
 
 const defaultLot: ILotItem = {
@@ -71,7 +71,7 @@ function GestionDesLots() {
   const [lot, setLot] = useState(defaultLot);
   const [deleteSelected, setDeleteSelected] = useState(false);
 
-  const dateError = isAfter(filters.DATECREATION, filters.DATEDEPOSITION);
+  const dateError = isAfter(filters.creationDate, filters.depositionDate);
 
 /* ------------------------------ GET LOTS LIST ----------------------------- */
   const _lots = async () => {
@@ -483,15 +483,15 @@ function applyFilter({
   dateError: boolean;
 }) {
 /* -------------------------------- CONSTANTS ------------------------------- */
-  const { createur, DATECREATION, DATEDEPOSITION  } = filters;
+  const { créateur, creationDate, depositionDate  } = filters;
 
-  if (createur) {
-    inputData = inputData?.filter((lot) => lot.createur.username.toLowerCase().indexOf(createur.toLowerCase()) !== -1 );
+  if (créateur) {
+    inputData = inputData?.filter((lot) => lot.createur.username.toLowerCase().indexOf(créateur.toLowerCase()) !== -1 );
   }
 
   if (!dateError) {
-    if (DATECREATION && DATEDEPOSITION) {
-      inputData = inputData.filter((lot) => isBetween(lot.DATECREATION, DATECREATION, DATEDEPOSITION));
+    if (creationDate && depositionDate) {
+      inputData = inputData.filter((lot) => isBetween(lot.DATECREATION, creationDate, depositionDate));
     }
   }
 

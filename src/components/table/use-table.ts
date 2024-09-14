@@ -29,7 +29,7 @@ function useTable(props?: UseTableProps): ReturnType {
   const [dense, setDense] = useState(!!props?.defaultDense);
   const [page, setPage] = useState(props?.defaultCurrentPage || 0);
   //const [orderBy, setOrderBy] = useState(props?.defaultOrderBy || 'name');
-  const [orderBy, setOrderBy] = useState<string | number>(props?.defaultOrderBy || 'name');
+  const [orderBy, setOrderBy] = useState<number>(props?.defaultOrderBy || 0);
   const [rowsPerPage, setRowsPerPage] = useState(props?.defaultRowsPerPage || 5); //default numbers of rows per page
   const [order, setOrder] = useState<'asc' | 'desc'>(props?.defaultOrder || 'asc');
   const [selected, setSelected] = useState<number[]>(props?.defaultSelected || []);

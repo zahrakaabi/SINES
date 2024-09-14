@@ -67,12 +67,55 @@ import {
   _comfirmPassword,
   _status,
 } from './assets';
+import { sub } from 'date-fns';
+
+/* -------------------------------------------------------------------------- */
+/*                                   boolean                                  */
+/* -------------------------------------------------------------------------- */
+const _booleans = [
+  true,
+  true,
+  true,
+  false,
+  false,
+  true,
+  false,
+  false,
+  false,
+  false,
+  true,
+  true,
+  true,
+  false,
+  false,
+  false,
+  true,
+  false,
+  false,
+  false,
+  true,
+  false,
+  false,
+  true,
+];
 
 /* -------------------------------------------------------------------------- */
 /*                               FILE MOCK                                    */
 /* -------------------------------------------------------------------------- */
 export const _mock = {
   id: (index: number) => _id[index],
+
+  /// for notifications mock
+  time: (index: number) => sub(new Date(), { days: index, hours: index }),
+  boolean: (index: number) => _booleans[index],
+  image: {
+    cover: (index: number) => `${ASSETS_API}/assets/images/cover/cover_${index + 1}.jpg`,
+    avatar: (index: number) => `${ASSETS_API}/assets/images/avatar/avatar_${index + 1}.jpg`,
+    travel: (index: number) => `${ASSETS_API}/assets/images/travel/travel_${index + 1}.jpg`,
+    company: (index: number) => `${ASSETS_API}/assets/images/company/company_${index + 1}.png`,
+    product: (index: number) => `${ASSETS_API}/assets/images/m_product/product_${index + 1}.jpg`,
+    portrait: (index: number) => `${ASSETS_API}/assets/images/portrait/portrait_${index + 1}.jpg`,
+  },
 
   // DOSSIER
   // fiche client
@@ -133,9 +176,5 @@ export const _mock = {
   role: (index: number) => _role[index],
   password: (index: number) => _password[index],
   comfirmPassword: (index: number) => _comfirmPassword[index],
-  status: (index: number) => _status[index],
-  // Image
-  image: {
-    avatar: (index: number) => `${ASSETS_API}/assets/images/avatar/avatar_${index + 1}.jpg`,
-  },
+  status: (index: number) => _status[index]
 };

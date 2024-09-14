@@ -6,7 +6,7 @@ export type TableProps = {
   page: number;
   rowsPerPage: number;
   order: 'asc' | 'desc';
-  orderBy: string;
+  orderBy: number;
   //
   selected: number[];
   onSelectRow: (id: number) => void;
@@ -29,7 +29,7 @@ export type TableProps = {
   setPage: React.Dispatch<React.SetStateAction<number>>;
   setDense: React.Dispatch<React.SetStateAction<boolean>>;
   setOrder: React.Dispatch<React.SetStateAction<'desc' | 'asc'>>;
-  setOrderBy: React.Dispatch<React.SetStateAction<string>>;
+  setOrderBy: React.Dispatch<React.SetStateAction<number>>;
   setSelected: React.Dispatch<React.SetStateAction<number[]>>;
   setRowsPerPage: React.Dispatch<React.SetStateAction<number>>;
 };

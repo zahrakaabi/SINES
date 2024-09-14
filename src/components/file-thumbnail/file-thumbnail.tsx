@@ -29,9 +29,6 @@ export default function FileThumbnail({
   const { name = '', path = '', preview = '' } = fileData(file) || {};
 
   const format = fileFormat(path || preview);
-  console.log('preview', preview)
-  console.log('path', path)
-  console.log('file', fileData(file))
 
   const renderContent =
     format === 'pdf' && fileView  ? (

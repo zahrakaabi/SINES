@@ -74,7 +74,7 @@ function LotTableToolbar({
         
         <DatePicker
           label="Date de Création"
-          value={filters.DATECREATION}
+          value={filters.creationDate}
           onChange={handleFilterCreationtDate}
           slotProps={{ textField: { fullWidth: true } }}
           sx={{
@@ -84,7 +84,7 @@ function LotTableToolbar({
 
         <DatePicker
           label="Date de Déposition"
-          value={filters.DATEDEPOSITION}
+          value={filters.depositionDate}
           onChange={handleFilterDepositionDate}
           slotProps={{
             textField: {
@@ -105,7 +105,7 @@ function LotTableToolbar({
         <Stack direction="row" alignItems="center" spacing={2} flexGrow={1} sx={{ width: 1 }}>
           <TextField
             fullWidth
-            value={filters.createur}
+            value={filters.créateur}
             onChange={handleFilter}
             placeholder="Recherche..."
             InputProps={{

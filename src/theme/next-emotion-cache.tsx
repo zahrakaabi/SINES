@@ -56,7 +56,7 @@ export default function NextAppDirEmotionCacheProvider(props: NextAppDirEmotionC
 
     const globals: {
       name: string;
-      style: string;
+      style: string | undefined;
     }[] = [];
 
     inserted.forEach(({ name, isGlobal }) => {
