@@ -56,7 +56,7 @@ export default function NextAppDirEmotionCacheProvider(props: NextAppDirEmotionC
 
     const globals: {
       name: string;
-      style: string | undefined;
+      style: string;
     }[] = [];
 
     inserted.forEach(({ name, isGlobal }) => {
@@ -64,7 +64,7 @@ export default function NextAppDirEmotionCacheProvider(props: NextAppDirEmotionC
 
       if (typeof style !== 'boolean') {
         if (isGlobal) {
-          globals.push({ name, style });
+          if (style) globals.push({ name, style });
         } else {
           styles += style;
           dataEmotionAttribute += ` ${name}`;
